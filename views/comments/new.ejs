@@ -1,0 +1,13 @@
+<% include ../partials/header %>
+<div class="container">
+<h1>Add a new comment to <%=campground.name %></h1>
+
+<form action="/campgrounds/<%= campground._id %>/comments" method="POST">
+    <div class="form-group">
+        <label for="commentText">Your Comment</label>
+        <textarea class="form-control" type="text" placeholder="Your Comment" name="comment[text]" id="commentText" required rows="10"></textarea>
+    </div>
+    <button type="submit" class="btn btn-large btn-primary">Submit</button>
+</form>
+</div>
+<% include ../partials/footer %>
